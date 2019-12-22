@@ -1,0 +1,58 @@
+﻿@model List<ROS.Models.Tables>
+@{
+    ViewBag.Title = "Tables";
+}
+
+
+<div class="content-wrapper">
+    <div class="grid-margin stretch-card">
+
+        <div class="col-lg-10 card">
+            <div class="card-body">
+                <h2>Table Area</h2>
+                <a class="btn btn-success btn-block col-md-3 mt-3" href="/Table/AddTable">
+                    Add New Area <i class="mdi mdi-plus"></i>
+                </a>
+
+                <div class="table-responsive mt-3">
+                    <table id="productDT" class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Group</th>
+                                <th>Count</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Groups)</td>
+                                <td>@Html.DisplayFor(modelItem => item.Count) Tables</td>
+                                <td>
+                                    <a class="btn btn-sm btn-primary" href="/Table/EditTable/@item.Id">
+                                        <i class="mdi mdi-plus"></i>
+                                    </a>
+                                    <a class="btn btn-sm btn-danger" href="/Table/Delete/@item.Id">
+                                        <i class="mdi mdi-delete"></i>
+                                    </a>
+                                </td>
+
+                            </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

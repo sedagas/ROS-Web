@@ -1,0 +1,77 @@
+﻿@model ROS.Models.User
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ROS - Restaurant Ordering System</title>
+
+    <link href="~/Content/vendors/iconfonts/mdi/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="~/Content/vendors/css/vendor.bundle.base.css" rel="stylesheet" />
+    <link href="~/Content/vendors/css/vendor.bundle.addons.css" rel="stylesheet" />
+
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/Content/images/favicon.png" />
+</head>
+<body>
+    <div class="container-scroller">
+        <div class="container-fluid page-body-wrapper full-page-wrapper auth-page">
+            <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+                <div class="row w-100">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auto-form-wrapper">
+                            <form action="Login" method="post">
+                                <div class="form-group">
+                                    <label class="label">Username</label>
+                                    <div class="input-group">
+                                        <input type="text" name="Username" class="form-control" placeholder="Username">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="mdi mdi-check-circle-outline"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Password</label>
+                                    <div class="input-group">
+                                        <input type="password" name="Pass" class="form-control" placeholder="*********">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text">
+                                                <i class="mdi mdi-check-circle-outline"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-primary submit-btn btn-block">Login</button>
+                                </div>
+                                @*<div class="text-block text-center my-3">
+                                    <span class="text-small font-weight-semibold">Not a member ?</span>
+                                    <a href="/Auth/Register" class="text-black text-small">Create new account</a>
+                                </div>*@
+                            </form>
+                        </div>
+                        <p class="footer-text text-center">ROS ©  Restaurant Ordering System. For quality servings.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+
+    <script src="~/Content/vendors/js/vendor.bundle.base.js"></script>
+    <script src="~/Content/vendors/js/vendor.bundle.addons.js"></script>
+
+    <script src="~/Content/js/off-canvas.js"></script>
+    <script src="~/Content/js/misc.js"></script>
+
+</body>
+</html>

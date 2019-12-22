@@ -1,0 +1,55 @@
+﻿@model ROS.Models.Tables
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<div class="content-wrapper">
+    <div class="grid-margin stretch-card">
+
+        <div class="col-lg-10 card">
+            <div class="card-body">
+                <h2>Delete</h2>
+
+                <div>
+                    <h4>Tables</h4>
+                    <hr />
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Count)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Count)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(model => model.Uid)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(model => model.Uid)
+                        </dd>
+
+                    </dl>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <a class="btn btn-md btn-danger" href="/Table/DeleteTables/@Model.Id">Delete</a>
+                        <a class="btn btn-light btn-md" href="/Table/Tables">Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

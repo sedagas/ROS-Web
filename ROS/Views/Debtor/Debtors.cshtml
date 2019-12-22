@@ -1,0 +1,35 @@
+﻿@model List<ROS.Models.Addition>
+@{
+    ViewBag.Title = "Debtors";
+}
+
+<div class="content-wrapper">
+    <div class="row">
+        <h2>Debtors</h2>
+        @foreach (var item in Model)
+        {
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-6 grid-margin stretch-card ">
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-title">
+                            <h5 id="cs-name" class="text-uppercase">@item.CustomerName</h5>
+                        </div>
+                        <div class="clearfix">
+                            <div class="float-left">
+                                <p id="adt-date" class="text-gray">@item.Date</p>
+                                <p id="adt-total" class="text-gray">@item.Total €</p>
+
+                            </div>
+                            <div class="float-right">
+                                <button class="btn btn-rounded btn-icons btn-primary">
+                                    <i class="mdi mdi-check"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                }
+            </div>
+        </div>

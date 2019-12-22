@@ -1,0 +1,54 @@
+﻿@model List<ROS.Models.Product>
+@{
+    ViewBag.Title = "Products";
+}
+<div class="content-wrapper">
+    <div class="grid-margin stretch-card">
+
+        <div class="col-lg-10 card">
+            <div class="card-body">
+                <h2>Products</h2>
+                <a class="btn btn-success btn-block col-md-2 mt-3" href="/Product/AddProduct" >
+                    New Prudct <i class="mdi mdi-plus"></i>
+                </a>
+
+                <div class="table-responsive mt-3">
+                    <table id="productDT" class="table table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Amount</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Category)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Amount)</td>
+                                    <td>
+                                        <a class="btn btn-sm btn-primary" href="/Product/Edit/@item.Id">
+                                            <i class="mdi mdi-table-edit"></i>
+                                        </a>
+                                        <a class="btn btn-sm btn-danger" href="/Product/Delete/@item.Id">
+                                            <i class="mdi mdi-delete"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
